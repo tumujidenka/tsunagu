@@ -284,6 +284,13 @@ button {
   color: #fff;
 }
 
+
+@media screen and (min-width: 768px) {
+  .p-footer{
+    position: relative;
+  }
+}
+
 .p-footer__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,10 +301,34 @@ button {
           justify-content: center;
 }
 
+@media screen and (min-width: 768px) {
+  .p-footer__list {
+    max-width:1130px;
+    padding-right: 1.5625rem;
+    justify-content:flex-end;
+  }
+}
+
 .p-footer__link {
   font-size: max(0.6875rem, 12px);
   font-family: "NotoSerifJP-Regular.otf", serif;
   letter-spacing: 0.05em;
+}
+@media screen and (min-width: 768px) {
+  .p-footer__link {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .p-footer__link .icon {
+    display: inline-block;
+    width: 24px;
+    color:white;
+    height: 24px;
+    background-image: url('../images/tsumugi/open-page.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .p-footer__logo {
@@ -305,12 +336,26 @@ button {
   width: 8.75rem;
   margin-inline: auto;
 }
+@media screen and (min-width: 768px) {
+  .p-footer__logo {
+    position: absolute;
+    top:0;
+    margin-left:1.5625rem;
+  }
+}
 
 .p-footer__copy {
   margin-top: 3.9375rem;
   font-size: max(0.6875rem, 12px);
   font-weight: 400;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-footer__copy {
+    margin-top:16px;
+    padding-right: 1.5625rem;
+    text-align: right;
+  }
 }
 
 .p-tsunagu-system {
@@ -680,9 +725,16 @@ button {
   padding-top: 0.3125rem;
   padding-left: 1.875rem;
   letter-spacing: 0;
-  font-size: max(1rem, 12px);
+  font-size: 18px;
   font-weight: 700;
 }
+
+@media screen and (min-width:768px) {
+  .p-tsunagu-faq__question > br{
+    display: none;
+  }
+}
+
 .p-tsunagu-faq__question::before {
   position: absolute;
   content: "Q";
@@ -702,14 +754,14 @@ button {
   margin-top: 0.625rem;
   position: relative;
   padding-top: 0.3125rem;
-  padding-left: 1.875rem;
+  padding-left: 3.875rem;
   letter-spacing: 0;
-  font-size: max(0.875rem, 12px);
+  font-size: 16px;
 }
 .p-tsunagu-faq__answer::before {
   position: absolute;
   content: "A";
-  left: 0;
+  left: 28px;
   top: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
