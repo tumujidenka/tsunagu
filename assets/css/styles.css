@@ -320,7 +320,7 @@ button {
     display: inline-flex;
     align-items: center;
   }
-  .p-footer__link .icon {
+  .p-footer__link .open-page-icon {
     display: inline-block;
     width: 24px;
     height: 24px;
