@@ -323,7 +323,6 @@ button {
   .p-footer__link .icon {
     display: inline-block;
     width: 24px;
-    color:white;
     height: 24px;
     background-image: url('../images/tsumugi/open-page.svg');
     background-size: cover;
