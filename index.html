@@ -26,6 +26,29 @@
 </head>
 
 <body>
+  <header>
+    <div class="header--inner">
+      <div class="header__logo"><img src="./assets/images/tsumugi/logo-white.png" alt="#"></div>
+      <div class="header__logo green"><img src="./assets/images/tsumugi/logo-green.png" alt="#"></div>
+      <div class="header__nav" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>    
+    </div>
+  </header>
+  <!-- メニュー表示のための画面 -->
+  <div class="menu" id="menu">
+    <ul class="menu__list">
+      <li><a href="#">TOP</a></li>
+      <li><a href="#about">TSUNAGUとは</a></li>
+      <li><a href="#function">主な機能</a></li>
+      <li><a href="#how">お申し込み・ダウンロード</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+      <li><a href="#">会社案内<span class="open-page-icon--black"></span></a></li>
+    </ul>
+  </div>
+
   <section class="p-tsunagu-mv">
     <div class="p-tsunagu-mv__inner l-inner">
       <p class="p-tsunagu-mv__lead">
@@ -37,7 +60,7 @@
     </div>
   </section>
 
-  <section class="p-tsunagu-about">
+  <section class="p-tsunagu-about" id="about">
     <div class="l-inner">
       <h2 class="p-tsunagu-about__title c-section-title">
         <img src="./assets/images/tsumugi/logo-green.png" alt="tsumugi" width="185" height="35" loading="lazy">とは?
@@ -213,7 +236,7 @@
     </div>
   </section>
 
-  <section class="p-tsunagu-can-function">
+  <section class="p-tsunagu-can-function" id="function">
     <div class="l-inner">
       <h2 class="p-tsunagu-can-function__title">TSUNAGUアプリの主要な機能</h2>
       <ul class="p-tsunagu-can-function__list">
@@ -253,7 +276,7 @@
     </div>
   </section>
 
-  <section class="p-tsunagu-how">
+  <section class="p-tsunagu-how" id="how">
     <div class="l-inner">
       <h2 class="c-section-title">お申し込み方法</h2>
       <ul class="p-tsunagu-how__list">
@@ -282,7 +305,7 @@
     </div>
   </section>
 
-  <section class="p-tsunagu-faq">
+  <section class="p-tsunagu-faq" id="faq">
     <div class="l-inner">
       <h2 class="c-section-title">よくある質問</h2>
       <div class="p-tsunagu-faq__list">

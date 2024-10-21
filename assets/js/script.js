@@ -31,3 +31,40 @@ $(document).on('click', 'a[href*="#"]', function () {
   $('html,body').animate({ scrollTop: targetY }, time, 'swing');
   return false;
 });
+
+
+//スマホメニュー表示
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('menu');
+  const menuLinks = document.querySelectorAll('.menu__list a'); // メニュー内のリンクを取得
+  const greenLogo = document.querySelector('.header__logo.green');
+  const whiteLogo = document.querySelector('.header__logo');
+
+  // ナビゲーションボタンのクリックイベント
+  navToggle.addEventListener('click', function() {
+    navToggle.classList.toggle('active');  // ハンバーガーメニューのアニメーション
+    menu.classList.toggle('active');  // メニューの表示/非表示を切り替え
+
+    // ロゴの表示・非表示を切り替える
+    if (menu.classList.contains('active')) {
+      greenLogo.style.display = 'block';  // 緑のロゴを表示
+      whiteLogo.style.display = 'none';   // 白のロゴを非表示
+    } else {
+      greenLogo.style.display = 'none';   // 緑のロゴを非表示
+      whiteLogo.style.display = 'block';  // 白のロゴを表示
+    }
+  });
+
+  // 各メニュー項目をクリックした際にメニューを閉じる
+  menuLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      navToggle.classList.remove('active');  // ハンバーガーメニューのアニメーションを元に戻す
+      menu.classList.remove('active');  // メニューを非表示にする
+
+      // ロゴを元に戻す
+      greenLogo.style.display = 'none';   // 緑のロゴを非表示
+      whiteLogo.style.display = 'block';  // 白のロゴを表示
+    });
+  });
+});
