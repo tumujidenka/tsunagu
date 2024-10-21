@@ -249,7 +249,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .c-section-title {
-    font-size: max(36px, 12px);
+    font-size: 36px;
     line-height: 1.25;
   }
 }
@@ -332,13 +332,13 @@ button {
 
 .p-footer__logo {
   margin-top: 1.125rem;
-  width: 8.75rem;
+  width: 13.75rem;
   margin-inline: auto;
 }
 @media screen and (min-width: 768px) {
   .p-footer__logo {
     position: absolute;
-    top:0;
+    top:15%;
     margin-left:1.5625rem;
   }
 }
@@ -572,7 +572,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-tsunagu-can__item-title span {
-    font-size: max(1.75rem, 12px);
+    font-size: 28px;
     letter-spacing: 0.02em;
   }
 }
@@ -587,7 +587,7 @@ button {
   .p-tsunagu-can__item-text {
     background-color: #fff;
     padding: 1.875rem 1.4375rem;
-    font-size: max(0.9rem, 12px);
+    font-size: 16px;
     line-height: 1.75;
     width: 37.1875rem;
   }
@@ -639,7 +639,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-tsunagu-mv__lead span {
-    font-size: max(1.75rem, 12px);
+    font-size: 34px;
   }
 }
 
@@ -652,7 +652,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .p-tsunagu-mv__title {
-    font-size: max(4.375rem, 12px);
+    font-size: 62px;
   }
 }
 
@@ -664,10 +664,17 @@ button {
 .p-tsunagu-can-function__title {
   color: #365864;
   font-weight: 700;
-  font-size: max(36px, 12px);
+  font-size: 30px;
   line-height: 1.3043478261;
   text-align: center;
 }
+
+@media screen and (min-width: 768px) {
+  .p-tsunagu-can-function__title {
+    font-size: 36px;
+  }
+}
+
 
 .p-tsunagu-can-function__list {
   margin-top: 1.25rem;
@@ -699,7 +706,7 @@ button {
 
 @media screen and (min-width:768px){
   .p-tsunagu-can-function__item{
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .p-tsunagu-faq {
@@ -809,6 +816,12 @@ button {
   font-size: max(1.5rem, 12px);
   font-weight: 700;
   text-align: center;
+}
+
+@media screen and (min-width:768px) {
+  .p-tsunagu-how__title {
+    font-size: 28px;
+  }    
 }
 
 .p-tsunagu-how__text {
