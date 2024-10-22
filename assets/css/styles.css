@@ -636,12 +636,10 @@ header{
 }
 
 
-
-@media screen and (min-width: 768px) {
-  .p-tsunagu-can__item {
-    position: relative;
-  }
+.p-tsunagu-can__item {
+  position: relative;
 }
+
 .p-tsunagu-can__item + .p-tsunagu-can__item {
   margin-top: 4.5rem;
 }
@@ -663,6 +661,11 @@ header{
     left: auto;
     right: 0;
   }
+}
+
+.p-tsunagu-can__item-body {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -688,9 +691,10 @@ header{
 }
 
 .p-tsunagu-can__head {
+  display: none;
   color: #fff;
-  font-size: max(1.1875rem, 12px);
   position: absolute;
+  top:0;
   left: 1.125rem;
   line-height: 1;
   bottom: -0.625rem;
@@ -699,24 +703,53 @@ header{
 @media screen and (min-width: 768px) {
   .p-tsunagu-can__head {
     position:absolute;
-    top:0;
     font-size: max(1.75rem, 12px);
     color: #365864;
   }
 }
-.p-tsunagu-can__head span {
+.p-tsunagu-can__head span,.p-tsunagu-can__head--sp span {
   font-family: "Helvetica", sans-serif;
-  font-size: max(3.9375rem, 12px);
+  font-size: 80px;
   letter-spacing: 0;
   font-weight: 700;
 }
+
+.p-tsunagu-can__head--sp{
+  color: #fff;
+  position: absolute;
+  left:1.125rem;
+  bottom:-10px;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.p-tsunagu-can__list li:nth-child(2) .p-tsunagu-can__head--sp{
+  display: flex;
+  align-items: flex-end;  
+}
+
+.p-tsunagu-can__list li:nth-child(2) .p-tsunagu-can__head--sp p{
+  transform: translateY(-10px);
+}
+
+
 @media screen and (min-width: 768px) {
+  .p-tsunagu-can__head{
+    display: block;
+  }
+
   .p-tsunagu-can__head span {
     font-size: max(5.625rem, 12px);
     color: #fff;
     -webkit-text-stroke: 2px #365864;
     text-stroke: 2px #365864;
   }
+
+  .p-tsunagu-can__head--sp{
+    display: none;
+  }
+  
 }
 
 .p-tsunagu-can__item-title {
