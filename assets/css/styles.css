@@ -659,7 +659,7 @@ header{
   }
   .p-tsunagu-can__list li:nth-child(2) > div > div{
     left: auto;
-    right: 0;
+    right: 8px;
   }
 }
 
