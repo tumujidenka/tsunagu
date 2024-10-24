@@ -5,10 +5,8 @@ topBtn.hide();
 // ページトップボタンの表示設定
 $(window).scroll(function () {
   if ($(this).scrollTop() > 70) {
-    // 指定px以上のスクロールでボタンを表示
     topBtn.fadeIn();
   } else {
-    // 画面が指定pxより上ならボタンを非表示
     topBtn.fadeOut();
   }
 });
@@ -43,26 +41,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // ナビゲーションボタンのクリックイベント
   navToggle.addEventListener('click', function() {
-    navToggle.classList.toggle('active');  // ハンバーガーメニューのアニメーション
-    menu.classList.toggle('active');  // メニューの表示/非表示を切り替え
-
-    // ロゴの表示・非表示を切り替える
     if (menu.classList.contains('active')) {
-      greenLogo.style.display = 'block';  // 緑のロゴを表示
-      whiteLogo.style.display = 'none';   // 白のロゴを非表示
+      // メニューを閉じる処理
+      menu.classList.remove('active');
+
+      greenLogo.style.display = 'none';
+      whiteLogo.style.display = 'block';
     } else {
-      greenLogo.style.display = 'none';   // 緑のロゴを非表示
-      whiteLogo.style.display = 'block';  // 白のロゴを表示
+      // メニューを表示する処理
+      menu.classList.add('active');
+      greenLogo.style.display = 'block';
+      whiteLogo.style.display = 'none';
     }
+
+    navToggle.classList.toggle('active');
   });
 
   // 各メニュー項目をクリックした際にメニューを閉じる
   menuLinks.forEach(function(link) {
     link.addEventListener('click', function() {
-      navToggle.classList.remove('active');  // ハンバーガーメニューのアニメーションを元に戻す
-      menu.classList.remove('active');  // メニューを非表示にする
+      navToggle.classList.remove('active');
 
-      // ロゴを元に戻す
+      menu.classList.remove('active');  // 表示クラスを削除
+
       greenLogo.style.display = 'none';   // 緑のロゴを非表示
       whiteLogo.style.display = 'block';  // 白のロゴを表示
     });
@@ -84,6 +85,26 @@ window.addEventListener('scroll', function () {
 document.getElementById('back-to-top').addEventListener('click', function () {
   window.scrollTo({
       top: 0,
-      behavior: 'smooth' // スムーズにスクロール
+      behavior: 'smooth'
+  });
+});
+
+
+//p-tsunagu-about--beforeImageの高さの設定
+$(document).ready(function() {
+  function setBeforeImageTop() {
+    // .p-tsunagu-mvの高さを取得
+    var mvHeight = $('.p-tsunagu-mv').outerHeight() - 90;
+
+    // .p-tsunagu-about--beforeImageにtopの値を動的に設定
+    $('.p-tsunagu-about--beforeImage').css('top', mvHeight + 'px');
+  }
+
+  // 初回ロード時に高さを設定
+  setBeforeImageTop();
+
+  // ウィンドウリサイズ時にも高さを再設定
+  $(window).resize(function() {
+    setBeforeImageTop();
   });
 });
