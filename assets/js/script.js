@@ -68,3 +68,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+// スクロールイベントを監視し、トップに戻るボタンを表示・非表示にする
+window.addEventListener('scroll', function () {
+  const backToTopButton = document.getElementById('back-to-top');
+
+  if (window.pageYOffset > 100) { // 少しスクロールしたら表示
+      backToTopButton.classList.add('visible');
+  } else {
+      backToTopButton.classList.remove('visible');
+  }
+});
+
+// ボタンクリックでトップに戻る
+document.getElementById('back-to-top').addEventListener('click', function () {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // スムーズにスクロール
+  });
+});
